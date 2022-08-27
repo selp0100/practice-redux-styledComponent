@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Main = ({ number: { content, page, id } }) => {
+const Main = ({ number: { content, page, id }, Button }) => {
   const [changeColor, setChangeColor] = useState(false);
+  const [changeBtn, setChangeBtn] = useState(true);
+
+  const handleChanagetext = () => {
+    setChangeBtn(changeBtn => !changeBtn);
+  };
 
   const handleChanageColor = () => {
     setChangeColor(!changeColor);
@@ -16,6 +21,7 @@ const Main = ({ number: { content, page, id } }) => {
       </Article>
       <NewArticle>id = {id}</NewArticle>
       <PageChange to={page}>Link!</PageChange>
+      <Button onClick={handleChanagetext}>{changeBtn ? '전' : '후'}</Button>
     </Container>
   );
 };

@@ -28,7 +28,7 @@ const Main = () => {
         </Button>
       </BtnBox>
       {NUMBER_DATA.map(number => (
-        <Content number={number} key={number.id} />
+        <Content number={number} key={number.id} Button={Button} />
       ))}
     </MainPage>
   );
