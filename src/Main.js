@@ -4,18 +4,26 @@ import Content from './Content';
 
 const Main = () => {
   return (
-    <>
+    <MainPage>
       <Title>HELLO</Title>
       {NUMBER_DATA.map(number => (
         <Content number={number} key={number.id} />
       ))}
-    </>
+    </MainPage>
   );
 };
+
+const MainPage = styled.div`
+  ${props => props.theme.variables.absoluteCenter}
+  width:100vw;
+  padding: 3rem;
+`;
 
 const Title = styled.main`
   font-size: 2rem;
   color: black;
+  text-align: center;
+  margin: 5rem 0;
 `;
 
 export default Main;

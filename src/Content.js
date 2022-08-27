@@ -22,6 +22,7 @@ const Main = ({ number: { content, page, id } }) => {
 
 const Container = styled.div`
   ${props => props.theme.variables.flex('center', 'space-around', 'center')}
+  margin: 2rem 0;
 `;
 
 const Article = styled.article`
@@ -32,7 +33,7 @@ const Article = styled.article`
 
 const NewArticle = styled(Article)`
   font-size: 2rem;
-  color: ${props => props.theme.middleGrey};
+  color: ${props => props.theme.style.middleGrey};
 `;
 
 const PageChange = styled(Link)`
